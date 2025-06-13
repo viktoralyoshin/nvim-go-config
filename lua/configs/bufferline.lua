@@ -22,7 +22,6 @@ require("bufferline").setup({
         end
     },
     highlights = {
-        -- Основные стили
         background = {
             fg = "#808080",
         },
@@ -35,8 +34,6 @@ require("bufferline").setup({
             bg = "#569CD6",
             bold = true
         },
-
-        -- Остальные настройки...
         diagnostic = {
             fg = "#d4d4d4",
         },

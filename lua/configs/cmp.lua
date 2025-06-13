@@ -87,8 +87,3 @@ cmp.setup({
         entries = { name = 'custom', selection_order = 'near_cursor' }
     },
 })
-
-vim.api.nvim_set_hl(0, "CmpGhostText", { fg = "#808080", italic = true })
-vim.api.nvim_set_hl(0, "Pmenu", { bg = "#1e1e1e", blend = 10 })
-vim.api.nvim_set_hl(0, "PmenuBorder", { fg = "#333333", bg = "#1e1e1e" })
-vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#264F78", fg = "white" })

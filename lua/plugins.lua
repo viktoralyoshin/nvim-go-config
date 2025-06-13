@@ -73,10 +73,7 @@ require("packer").startup(function(use)
 
     use { "scottmckendry/cyberdream.nvim",
         config = function()
-            require("cyberdream").setup({
-                transparent = true
-            })
-            vim.cmd("colorscheme cyberdream")
+            vim.cmd.colorscheme "cyberdream"
         end
     }
 
@@ -180,6 +177,31 @@ require("packer").startup(function(use)
             }
         end
     }
-    
+
     use 'onsails/lspkind-nvim'
+
+    use {
+        'ray-x/lsp_signature.nvim',
+        config = function()
+            require('lsp_signature').setup({
+                bind = true,
+                handler_opts = {
+                    border = "rounded"
+                },
+                hint_enable = true,
+                floating_window = true,
+                floating_window_above_cur_line = true,
+                fix_pos = true,
+                transparency = 30,
+                toggle_key = '<C-k>',
+            })
+        end
+    }
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require("configs.gitsigns")
+        end
+    }
 end)
