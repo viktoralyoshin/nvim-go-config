@@ -204,4 +204,7 @@ require("packer").startup(function(use)
             require("configs.gitsigns")
         end
     }
+    use {
+        'stevearc/dressing.nvim'
+    }
 end)
