@@ -8,11 +8,11 @@ vim.opt.smartindent = true
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
+vim.opt.autoread = true
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
     callback = function()
-        
         local cursor_pos = vim.api.nvim_win_get_cursor(0)
 
         vim.cmd([[silent! %!goimports]])
