@@ -49,5 +49,10 @@ require("neo-tree").setup({
         follow_current_file = {
             enabled = true
         }
-    }
+    },
+
+    filesystem_watchers = {
+        enable = true,
+        debounce_delay = 100,
+    },
 })
