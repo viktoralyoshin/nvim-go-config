@@ -76,12 +76,6 @@ cmp.setup({
         { name = 'buffer' },
         { name = 'path' },
     }),
-    experimental = {
-        ghost_text = {
-            hl_group = "CmpGhostText",
-        },
-        native_menu = false,
-    },
     view = {
         entries = { name = 'custom', selection_order = 'near_cursor' }
     },

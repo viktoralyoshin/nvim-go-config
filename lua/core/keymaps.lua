@@ -5,12 +5,17 @@ keymap("n", "<leader>e", ":Neotree focus<CR>", opts)
 keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
+keymap('n', '<leader>gt', ':GoAddTags json<CR>', { desc = 'Go add json tags', silent = true })
+keymap('v', '<leader>gt', ':GoAddTags json<CR>', { desc = 'Go add json tags', silent = true })
+
 keymap('n', '<leader>q', ':bdelete<CR>', {
     desc = 'Close current buffer',
     silent = true
 })
 
-vim.keymap.set('n', '<leader>o', function()
+keymap('n', '<leader>r', ':IncRename ', { desc = 'Rename' })
+
+keymap('n', '<leader>o', function()
     local current = vim.api.nvim_get_current_buf()
     local skipped = 0
 

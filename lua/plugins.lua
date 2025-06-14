@@ -53,6 +53,18 @@ require("packer").startup(function(use)
     }
 
     use {
+        'fatih/vim-go',
+        run = ':GoUpdateBinaries'
+    }
+
+    use {
+        'tommcdo/vim-lion',
+        config = function()
+            vim.g.lion_squeeze_spaces = 1
+        end
+    }
+
+    use {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = function()
@@ -250,6 +262,13 @@ require("packer").startup(function(use)
     }
 
     use {
+        'smjonas/inc-rename.nvim',
+        config = function()
+            require('inc_rename').setup()
+        end
+    }
+
+    use {
         'catppuccin/nvim',
         as = 'catppuccin',
         config = function()
@@ -261,7 +280,7 @@ require("packer").startup(function(use)
         end
     }
 
-    use { "scottmckendry/cyberdream.nvim"}
+    use { "scottmckendry/cyberdream.nvim" }
 
     use { "folke/tokyonight.nvim" }
 
