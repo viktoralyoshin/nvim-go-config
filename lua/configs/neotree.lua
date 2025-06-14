@@ -35,7 +35,8 @@ require("neo-tree").setup({
             ["h"] = "close_node",
             ["a"] = "add",
             ["d"] = "delete",
-            ["r"] = "rename"
+            ["r"] = "rename",
+            ["R"] = "refresh"
         }
     },
 
@@ -44,10 +45,31 @@ require("neo-tree").setup({
         filtered_items = {
             hide_dotfiles = false,
             hide_gitignored = false,
-            hide_by_name = { "node_modules", ".git" }
         },
         follow_current_file = {
             enabled = true
+        },
+        git_status_async = true,
+        git_status_async_options = {
+            interval = 1000,
+            max_items = 200
         }
     },
+
+    event_handlers = {
+        {
+            event = "git_event",
+            handler = function()
+                require("neo-tree.sources.filesystem").reset_git()
+            end
+        },
+        {
+            event = "terminal_command",
+            handler = function()
+                vim.defer_fn(function()
+                    require("neo-tree.sources.filesystem").reset_git()
+                end, 500)
+            end
+        }
+    }
 })
