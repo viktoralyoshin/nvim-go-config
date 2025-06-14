@@ -101,11 +101,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
         vim.cmd("hi clear")
         vim.cmd.colorscheme(themes[current_theme])
         require("configs.bufferline")
-
-        require("configs.colorscheme")
-
+        require("lualine").setup({ options = { theme = "auto" } })
     end
 })
 
 vim.keymap.set("n", "<leader>tt", ToggleTheme, { desc = "Toggle themes cycle" })
-vim.keymap.set("n", "<leader>st", SelectTheme, { desc = "Select theme from list" })
+vim.keymap.set("n", "<leader>ts", SelectTheme, { desc = "Select theme from list" })

@@ -269,6 +269,21 @@ require("packer").startup(function(use)
     }
 
     use {
+        'simrat39/symbols-outline.nvim',
+        config = function()
+            require('symbols-outline').setup()
+        end
+    }
+
+    use {
+        'andythigpen/nvim-coverage',
+        requires = 'nvim-lua/plenary.nvim',
+        config = function()
+            require("configs.coverage")
+        end
+    }
+
+    use {
         'catppuccin/nvim',
         as = 'catppuccin',
         config = function()
