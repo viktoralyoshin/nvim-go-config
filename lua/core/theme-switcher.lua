@@ -102,6 +102,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
         vim.cmd.colorscheme(themes[current_theme])
         require("configs.bufferline")
         require("lualine").setup({ options = { theme = "auto" } })
+        require("configs.colorscheme")
     end
 })
 
