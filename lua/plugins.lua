@@ -207,4 +207,40 @@ require("packer").startup(function(use)
     use {
         'stevearc/dressing.nvim'
     }
+
+    use {
+        "RRethy/vim-illuminate",
+        config = function()
+            require("configs.illuminate")
+        end
+    }
+
+    use {
+        'petertriho/nvim-scrollbar',
+        config = function()
+            require("configs.scrollbar")
+        end
+    }
+
+    use {
+        "MunifTanjim/nui.nvim"
+    }
+
+    use {
+        "rcarriga/nvim-notify",
+        config = function()
+            require("configs.notify")
+        end,
+    }
+
+    use {
+        "folke/noice.nvim",
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify"
+        },
+        config = function()
+            require("configs.noice")
+        end,
+    }
 end)
