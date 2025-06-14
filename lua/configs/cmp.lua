@@ -1,7 +1,6 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
--- Настройка оформления
 local kind_icons = {
     Text = "",
     Method = "",

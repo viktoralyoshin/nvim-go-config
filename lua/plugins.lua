@@ -261,14 +261,13 @@ require("packer").startup(function(use)
         end
     }
 
-    use { "scottmckendry/cyberdream.nvim" }
+    use { "scottmckendry/cyberdream.nvim"}
 
     use { "folke/tokyonight.nvim" }
 
-    use {'navarasu/onedark.nvim'}
+    use { 'navarasu/onedark.nvim' }
 
-    use {"rebelot/kanagawa.nvim"}
+    use { "rebelot/kanagawa.nvim" }
 
-    use {"datsfilipe/vesper.nvim"}          
-
+    use { "datsfilipe/vesper.nvim" }
 end)

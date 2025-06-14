@@ -1,5 +1,5 @@
 local themes = { "cyberdream", "catppuccin", "tokyonight", "onedark", "kanagawa",
-"vesper"}
+    "vesper" }
 local state_file = vim.fn.stdpath('data') .. '/theme_state'
 
 local function load_theme()
@@ -96,12 +96,15 @@ function ToggleTheme()
 end
 
 vim.api.nvim_create_autocmd("VimEnter", {
-  once = true,
-  callback = function()
-    vim.cmd("hi clear")
-    vim.cmd.colorscheme(themes[current_theme])
-    require("configs.bufferline")
-  end
+    once = true,
+    callback = function()
+        vim.cmd("hi clear")
+        vim.cmd.colorscheme(themes[current_theme])
+        require("configs.bufferline")
+
+        require("configs.colorscheme")
+
+    end
 })
 
 vim.keymap.set("n", "<leader>tt", ToggleTheme, { desc = "Toggle themes cycle" })

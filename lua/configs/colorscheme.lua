@@ -1,0 +1,5 @@
+vim.api.nvim_set_hl(0, 'CmpBorder', { fg = '#61afef', bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#3e4452' })
+vim.api.nvim_set_hl(0, 'PmenuBorder', { link = 'CmpBorder' })
+vim.api.nvim_set_hl(0, 'CmpGhostText', { fg = '#7f848e' })
