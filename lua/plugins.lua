@@ -29,9 +29,6 @@ require("packer").startup(function(use)
     use({
         "akinsho/bufferline.nvim",
         requires = "nvim-tree/nvim-web-devicons",
-        config = function()
-            require("configs.bufferline")
-        end,
     })
 
     use {
@@ -60,12 +57,6 @@ require("packer").startup(function(use)
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup {}
-        end
-    }
-
-    use { "scottmckendry/cyberdream.nvim",
-        config = function()
-            vim.cmd.colorscheme "cyberdream"
         end
     }
 
@@ -252,4 +243,27 @@ require("packer").startup(function(use)
             require("configs.neotree")
         end
     }
+
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin',
+        config = function()
+            require('catppuccin').setup({
+                flavour = 'mocha',
+                transparent_background = false,
+                term_colors = true,
+            })
+        end
+    }
+
+    use { "scottmckendry/cyberdream.nvim" }
+
+    use { "folke/tokyonight.nvim" }
+
+    use {'navarasu/onedark.nvim'}
 end)

@@ -1,3 +1,5 @@
+vim.opt.termguicolors = true
+
 require("bufferline").setup({
     options = {
         mode = "buffers",
@@ -21,25 +23,4 @@ require("bufferline").setup({
             return " " .. icon .. count
         end
     },
-    highlights = {
-        background = {
-            fg = "#808080",
-        },
-        buffer_selected = {
-            fg = "#ffffff",
-            bold = true,
-            italic = true,
-        },
-        indicator_selected = {
-            bg = "#569CD6",
-            bold = true
-        },
-        diagnostic = {
-            fg = "#d4d4d4",
-        },
-        diagnostic_selected = {
-            fg = "#569CD6",
-            bold = true
-        }
-    }
 })
