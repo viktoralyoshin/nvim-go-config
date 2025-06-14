@@ -9,6 +9,7 @@ vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 vim.opt.autoread = true
+vim.opt.clipboard = "unnamedplus"
 
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
