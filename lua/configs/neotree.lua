@@ -50,13 +50,4 @@ require("neo-tree").setup({
             enabled = true
         }
     },
-
-    git = {
-        enable = true,
-        ignore = false,
-    },
-    filesystem_watchers = {
-        enable = true,
-        debounce_delay = 100,
-    },
 })
