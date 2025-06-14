@@ -54,7 +54,7 @@ require('lualine').setup {
       'progress'
     },
     lualine_z = {
-      { 'location', separator = { right = '\u{e0b4}' }, left_padding = 2 }
+      { 'location', left_padding = 2 }
     },
   },
   inactive_sections = {

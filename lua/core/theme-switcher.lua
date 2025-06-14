@@ -1,4 +1,5 @@
-local themes = { "cyberdream", "catppuccin", "tokyonight", "onedark" }
+local themes = { "cyberdream", "catppuccin", "tokyonight", "onedark", "kanagawa",
+"vesper"}
 local state_file = vim.fn.stdpath('data') .. '/theme_state'
 
 local function load_theme()

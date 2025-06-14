@@ -266,4 +266,9 @@ require("packer").startup(function(use)
     use { "folke/tokyonight.nvim" }
 
     use {'navarasu/onedark.nvim'}
+
+    use {"rebelot/kanagawa.nvim"}
+
+    use {"datsfilipe/vesper.nvim"}          
+
 end)
