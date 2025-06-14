@@ -41,10 +41,6 @@ require("neo-tree").setup({
     },
 
     filesystem = {
-        refresh = {
-            interval = 1000,
-            max_items = 500,
-        },
         use_libuv_file_watcher = true,
         filtered_items = {
             hide_dotfiles = false,
