@@ -20,7 +20,7 @@ require("neo-tree").setup({
                 renamed = "➜",
                 untracked = "",
                 ignored = "",
-                unstaged = "",
+                unstaged = "󰧟",
                 staged = "",
                 conflict = ""
             }
@@ -45,6 +45,8 @@ require("neo-tree").setup({
             hide_gitignored = false,
             hide_by_name = { "node_modules", ".git" }
         },
-        follow_current_file = true
+        follow_current_file = {
+            enabled = true
+        }
     }
 })
