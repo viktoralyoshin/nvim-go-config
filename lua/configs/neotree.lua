@@ -38,7 +38,7 @@ require("neo-tree").setup({
             ["r"] = "rename"
         }
     },
-    
+
     filesystem = {
         use_libuv_file_watcher = true,
         filtered_items = {
@@ -51,6 +51,10 @@ require("neo-tree").setup({
         }
     },
 
+    git = {
+        enable = true,
+        ignore = false,
+    },
     filesystem_watchers = {
         enable = true,
         debounce_delay = 100,
