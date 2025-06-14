@@ -9,10 +9,10 @@ require("bufferline").setup({
         show_buffer_icons = false,
         offsets = {
             {
-                filetype = "NvimTree",
+                filetype = "neo-tree",
                 highlight = "Directory",
                 text_align = "left",
-                text = "File Explorer"
+                text = "Explorer"
             }
         },
         sort_by = "insert_after_current",

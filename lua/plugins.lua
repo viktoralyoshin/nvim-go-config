@@ -2,14 +2,6 @@ require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
 
     use {
-        'nvim-tree/nvim-tree.lua',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require('nvim-tree').setup()
-        end
-    }
-
-    use {
         'williamboman/mason.nvim',
         config = function()
             require('mason').setup()
@@ -146,16 +138,7 @@ require("packer").startup(function(use)
     use {
         'numToStr/Comment.nvim',
         config = function()
-            require('Comment').setup {
-                toggler = {
-                    line = '<C-_>',
-                    block = '<C-\\>',
-                },
-                opleader = {
-                    line = '<C-_>',
-                    block = '<C-\\>',
-                },
-            }
+            require("configs.comment")
         end
     }
 
@@ -165,12 +148,13 @@ require("packer").startup(function(use)
         config = function()
             require('toggleterm').setup {
                 size = 20,
-                open_mapping = [[<c-\>]],
+                open_mapping = [[<C-\>]],
                 shade_filetypes = {},
                 shade_terminals = true,
                 shading_factor = 2,
                 start_in_insert = true,
                 persist_size = true,
+                persist_mode = true,
                 direction = "horizontal",
                 close_on_exit = true,
                 shell = vim.o.shell,
@@ -242,5 +226,30 @@ require("packer").startup(function(use)
         config = function()
             require("configs.noice")
         end,
+    }
+
+    use {
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require('colorizer').setup({
+                '*',
+            }, {
+                mode = 'background',
+                names = false,
+            })
+        end
+    }
+
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim"
+        },
+        config = function()
+            require("configs.neotree")
+        end
     }
 end)
