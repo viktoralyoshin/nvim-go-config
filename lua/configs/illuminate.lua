@@ -6,7 +6,6 @@ require('illuminate').configure({
         'treesitter',
         'regex',
     },
-
     delay = 100,
 
     filetype_overrides = {},

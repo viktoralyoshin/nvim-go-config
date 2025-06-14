@@ -41,6 +41,10 @@ require("neo-tree").setup({
     },
 
     filesystem = {
+        refresh = {
+            interval = 1000,
+            max_items = 500,
+        },
         use_libuv_file_watcher = true,
         filtered_items = {
             hide_dotfiles = false,
@@ -49,27 +53,5 @@ require("neo-tree").setup({
         follow_current_file = {
             enabled = true
         },
-        git_status_async = true,
-        git_status_async_options = {
-            interval = 1000,
-            max_items = 200
-        }
     },
-
-    event_handlers = {
-        {
-            event = "git_event",
-            handler = function()
-                require("neo-tree.sources.filesystem").reset_git()
-            end
-        },
-        {
-            event = "terminal_command",
-            handler = function()
-                vim.defer_fn(function()
-                    require("neo-tree.sources.filesystem").reset_git()
-                end, 500)
-            end
-        }
-    }
 })
