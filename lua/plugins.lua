@@ -289,13 +289,17 @@ require("packer").startup(function(use)
         config = function()
             require('catppuccin').setup({
                 flavour = 'mocha',
-                transparent_background = false,
+                transparent_background = true,
                 term_colors = true,
             })
         end
     }
 
-    use { "scottmckendry/cyberdream.nvim" }
+    use { "scottmckendry/cyberdream.nvim",
+        require("cyberdream").setup({
+            transparent = true
+        })
+    }
 
     use { "folke/tokyonight.nvim" }
 
